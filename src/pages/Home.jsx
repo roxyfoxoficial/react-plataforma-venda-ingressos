@@ -125,7 +125,7 @@ export default function Home() {
                     <p className="card-text">
                       <strong>Organizador:</strong> {event.organizer}
                     </p>
-                    <a href="/" className="btn btn-danger">
+                    <a href={`/details-event/${event.id}`} className="btn btn-danger">
                       Detalhes
                     </a>
                   </div>
