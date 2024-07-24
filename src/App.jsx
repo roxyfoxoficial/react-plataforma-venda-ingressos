@@ -5,8 +5,8 @@ import CreateEvent from "./pages/CreateEvent";
 import CreateStaff from "./pages/CreateStaff";
 import DetailsEvent from "./pages/DetailsEvent";
 import Profile from "./pages/Profile";
-import Login from './pages/login'
-import Signup from './pages/signup'
+import Login from "./pages/login";
+import Signup from "./pages/signup";
 
 export default function App() {
   return (
@@ -25,4 +25,3 @@ export default function App() {
     </BrowserRouter>
   );
 }
-
