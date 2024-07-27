@@ -21,7 +21,7 @@ export default function Login() {
                 </div>
 
                 <label className="form-label" htmlFor="typePasswordX-2">
-                 Password
+                 Senha
                 </label>
 
                 <div data-mdb-input-init className="form-outline mb-4">
@@ -42,7 +42,7 @@ export default function Login() {
                   />
                   <label className="form-check-label" htmlFor="form1Example3">
                     {" "}
-                    Remember password{" "}
+                    Relembrar Senha{" "}
                   </label>
                 </div>
 

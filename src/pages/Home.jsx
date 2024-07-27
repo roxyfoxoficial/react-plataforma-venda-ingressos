@@ -89,11 +89,13 @@ export default function Home() {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-12">
+        <div className="col-12 row">
           <h1 className="text-center">
             Ingressos de Encontros, Shows e Eventos
           </h1>
+
         </div>
+
         <div className="col-12 text-center">
           <img
             className="img-fluid"
