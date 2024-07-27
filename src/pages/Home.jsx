@@ -1,3 +1,6 @@
+import { routes } from "@app/constants/routes";
+import { Layout } from "@app/Layout";
+
 export default function Home() {
   const eventsEncoursed = [
     {
@@ -87,89 +90,92 @@ export default function Home() {
   ];
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-12 row">
-          <h1 className="text-center">
-            Ingressos de Encontros, Shows e Eventos
-          </h1>
-
-        </div>
-
-        <div className="col-12 text-center">
-          <img
-            className="img-fluid"
-            src="/eventos.jpg"
-            alt="Banner de Eventos"
-          />
-        </div>
-        <div className="col-12">
-          <h1 className="text-center">Ingressos de Eventos Em Andamento</h1>
-        </div>
-        <div className="col-12">
-          <div className="row">
-            {eventsOpen.map((event) => (
-              <div key={event.id} className="col-12 col-md-6 col-lg-4">
-                <div className="card">
-                  <img
-                    className="card-img-top"
-                    src={event.image}
-                    alt={event.name}
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">{event.name}</h5>
-                    <p className="card-text">
-                      <strong>Local:</strong> {event.location}
-                    </p>
-                    <p className="card-text">
-                      <strong>Horário:</strong> {event.time}
-                    </p>
-                    <p className="card-text">
-                      <strong>Organizador:</strong> {event.organizer}
-                    </p>
-                    <a href="/" className="btn btn-danger">
-                      Detalhes
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
+    <Layout>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <h1 className="text-center">
+              Ingressos de Encontros, Shows e Eventos
+            </h1>
           </div>
-        </div>
-        <div className="col-12">
-          <h1 className="text-center">Ingressos de Eventos Encerrados</h1>
-        </div>
-        <div className="col-12">
-          <div className="row">
-            {eventsEncoursed.map((event) => (
-              <div key={event.id} className="col-12 col-md-6 col-lg-4">
-                <div className="card">
-                  <img
-                    className="card-img-top"
-                    src={event.image}
-                    alt={event.name}
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">{event.name}</h5>
-                    <p className="card-text">
-                      <strong>Local:</strong> {event.location}
-                    </p>
-                    <p className="card-text">
-                      <strong>Horário:</strong> {event.time}
-                    </p>
-                    <p className="card-text">
-                      <strong>Organizador:</strong> {event.organizer}
-                    </p>
-                    <a href="/" className="btn btn-danger">
-                      Detalhes
-                    </a>
+          <div className="col-12 text-center">
+            <img
+              className="img-fluid"
+              src="/eventos.jpg"
+              alt="Banner de Eventos"
+            />
+          </div>
+          <div className="col-12">
+            <h1 className="text-center">Ingressos de Eventos Em Andamento</h1>
+          </div>
+          <div className="col-12">
+            <div className="row">
+              {eventsOpen.map((event) => (
+                <div key={event.id} className="col-12 col-md-6 col-lg-4">
+                  <div className="card">
+                    <img
+                      className="card-img-top"
+                      src={event.image}
+                      alt={event.name}
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">{event.name}</h5>
+                      <p className="card-text">
+                        <strong>Local:</strong> {event.location}
+                      </p>
+                      <p className="card-text">
+                        <strong>Horário:</strong> {event.time}
+                      </p>
+                      <p className="card-text">
+                        <strong>Organizador:</strong> {event.organizer}
+                      </p>
+                      <a
+                        href={`${routes.detailsEvent}/${event.id}`}
+                        className="btn btn-danger"
+                      >
+                        Detalhes
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+          <div className="col-12">
+            <h1 className="text-center">Ingressos de Eventos Encerrados</h1>
+          </div>
+          <div className="col-12">
+            <div className="row">
+              {eventsEncoursed.map((event) => (
+                <div key={event.id} className="col-12 col-md-6 col-lg-4">
+                  <div className="card">
+                    <img
+                      className="card-img-top"
+                      src={event.image}
+                      alt={event.name}
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">{event.name}</h5>
+                      <p className="card-text">
+                        <strong>Local:</strong> {event.location}
+                      </p>
+                      <p className="card-text">
+                        <strong>Horário:</strong> {event.time}
+                      </p>
+                      <p className="card-text">
+                        <strong>Organizador:</strong> {event.organizer}
+                      </p>
+                      <a href="/" className="btn btn-danger">
+                        Detalhes
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }
