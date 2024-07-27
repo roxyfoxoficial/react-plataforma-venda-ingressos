@@ -1,6 +1,6 @@
 import { Layout } from "@app/Layout";
 
-export default function Events() {
+export default function ListEvent() {
   const events = [
     {
       id: 2,
@@ -57,7 +57,7 @@ export default function Events() {
                       <p className="card-text">
                         {event.ticketsSold} de {event.tickets} ingressos vendidos
                       </p>
-                      <a href={`/admin/edit-event/${event.id}`} className="btn btn-danger">
+                      <a href={`/admin/events/edit/${event.id}`} className="btn btn-danger">
                         Editar
                       </a>
                     </div>
