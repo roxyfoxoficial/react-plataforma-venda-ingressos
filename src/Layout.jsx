@@ -1,6 +1,6 @@
 // eslint-disable-next-line react/prop-types
 export function Layout({ children }) {
-  const groupUser = "user";
+  const groupUser = "admin";
 
   return (
     <>
@@ -22,14 +22,20 @@ export function Layout({ children }) {
                 Eventos
               </a>
             </li>
-            {groupUser === "admin" &&
-              (
-                <li className="nav-item">
-                  <a className="nav-link" href="/create-event">
-                    Organizar
-                  </a>
-                </li>
-              )}
+            {groupUser === "admin" && (
+              <li className="nav-item">
+                <a className="nav-link" href="/create-event">
+                  Organizar
+                </a>
+              </li>
+            )}
+            {groupUser === "admin" && (
+              <li className="nav-item">
+                <a className="nav-link" href="/create-staff">
+                  Staff
+                </a>
+              </li>
+            )}
             {(groupUser === null && (
               <li className="nav-item">
                 <a className="nav-link" href="/signin">
