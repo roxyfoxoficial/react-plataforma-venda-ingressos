@@ -1,6 +1,9 @@
+import { user } from "@app/constants/user";
 import { Layout } from "@app/Layout";
 
 export default function DetailsEvent() {
+  const group = user.group;
+
   const event = {
     id: 2,
     name: "The Marketing Show Brasil",
@@ -35,13 +38,23 @@ export default function DetailsEvent() {
             Ingressos vendidos: {event.ticketsSold}/{event.tickets}
           </p>
           <p className="text-lg mt-2">Preço: R${event.pricing}</p>
-          <button
-            className="mt-4 bg-blue-500 text-white btn-danger px-4 py-2 rounded"
-            data-toggle="modal"
-            data-target="#exampleModal"
-          >
-            Comprar ingresso
-          </button>
+          {group === "user" && (
+            <button
+              className="mt-4 bg-blue-500 text-white btn-danger px-4 py-2 rounded"
+              data-toggle="modal"
+              data-target="#exampleModal"
+            >
+              Comprar ingresso
+            </button>
+          )}
+          {group !== "user" && (
+            <button
+              className="mt-4 bg-blue-500 text-white btn-secondary px-4 py-2 rounded"
+              disabled
+            >
+              Comprar ingresso
+            </button>
+          )}
         </div>
         <div
           className="modal fade"
@@ -55,7 +68,7 @@ export default function DetailsEvent() {
             <div className="modal-content">
               <div className="modal-header">
                 <h5 className="modal-title" id="exampleModalLabel">
-                  Modal title
+                  Comprar Ingresso
                 </h5>
                 <button
                   type="button"
@@ -67,8 +80,8 @@ export default function DetailsEvent() {
                 </button>
               </div>
               <div className="modal-body">
-                Deseja realmente comprar um ingresso para o evento{" "}
-                {event.name} por R${event.pricing}?
+                Deseja realmente comprar um ingresso para o evento {event.name}{" "}
+                por R${event.pricing}?
               </div>
               <div className="modal-footer">
                 <button
