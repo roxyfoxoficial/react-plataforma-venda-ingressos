@@ -1,6 +1,9 @@
+import { user } from "./constants/user";
+import { routes } from "./constants/routes";
+
 // eslint-disable-next-line react/prop-types
 export function Layout({ children }) {
-  const groupUser = "admin";
+  const groupUser = user.group;
 
   return (
     <>
@@ -18,33 +21,55 @@ export function Layout({ children }) {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item active">
-              <a className="nav-link" href="/">
+              <a className="nav-link" href={routes.home}>
                 Eventos
               </a>
             </li>
             {groupUser === "admin" && (
               <li className="nav-item">
-                <a className="nav-link" href="/create-event">
-                  Organizar
+                <a className="nav-link" href={routes.createEvent}>
+                  Criar Evento
                 </a>
               </li>
             )}
             {groupUser === "admin" && (
               <li className="nav-item">
-                <a className="nav-link" href="/create-staff">
+                <a className="nav-link" href={routes.listEvents}>
+                  Meus Eventos
+                </a>
+              </li>
+            )}
+            {groupUser === "admin" && (
+              <li className="nav-item">
+                <a className="nav-link" href={routes.createStaff}>
+                  Criar Staff
+                </a>
+              </li>
+            )}
+            {groupUser === "admin" && (
+              <li className="nav-item">
+                <a className="nav-link" href={routes.listStaffs}>
                   Staff
                 </a>
               </li>
             )}
-            {(groupUser === null && (
+            {groupUser === null && (
               <li className="nav-item">
-                <a className="nav-link" href="/signin">
+                <a className="nav-link" href={routes.login}>
                   Entrar
                 </a>
               </li>
-            )) || (
+            )}
+            {groupUser === null && (
               <li className="nav-item">
-                <a className="nav-link" href="/profile">
+                <a className="nav-link" href={routes.register}>
+                  Cadastro
+                </a>
+              </li>
+            )}
+            {groupUser !== null && (
+              <li className="nav-item">
+                <a className="nav-link" href={routes.profile}>
                   Perfil
                 </a>
               </li>
