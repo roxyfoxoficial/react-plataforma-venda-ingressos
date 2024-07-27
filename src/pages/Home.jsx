@@ -1,3 +1,4 @@
+import { routes } from "@app/constants/routes";
 import { Layout } from "@app/Layout";
 
 export default function Home() {
@@ -129,7 +130,7 @@ export default function Home() {
                         <strong>Organizador:</strong> {event.organizer}
                       </p>
                       <a
-                        href={`/details-event/${event.id}`}
+                        href={`${routes.detailsEvent}/${event.id}`}
                         className="btn btn-danger"
                       >
                         Detalhes
