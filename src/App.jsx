@@ -22,10 +22,10 @@ export default function App() {
         <Route path={routes.changePassword} element={<ChangePassword />} />
         <Route path={routes.listEvents} element={<ListEvent />} />
         <Route path={routes.createEvent} element={<CreateEvent />} />
-        <Route path={routes.editEvent + '/:id'} element={<EditEvent />} />
+        <Route path={routes.editEvent + "/:id"} element={<EditEvent />} />
         <Route path={routes.createStaff} element={<CreateStaff />} />
         <Route path={routes.listStaffs} element={<ListStaff />} />
-        <Route path={routes.detailsEvent + '/:id'} element={<DetailsEvent />} />
+        <Route path={routes.detailsEvent + "/:id"} element={<DetailsEvent />} />
         <Route path={routes.profile} element={<Profile />} />
         <Route path="**" element={<Home />} />
       </Routes>
