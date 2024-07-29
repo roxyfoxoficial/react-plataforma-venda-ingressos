@@ -1,5 +1,5 @@
-import { routes } from "@app/constants/routes";
-import { Layout } from "@app/Layout";
+import { routes } from "../constants/routes";
+import { Layout } from "../Layout";
 
 export default function Home() {
   const eventsEncoursed = [

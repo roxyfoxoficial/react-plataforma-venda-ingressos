@@ -1,4 +1,4 @@
-import { Layout } from "@app/Layout";
+import { Layout } from "../../Layout";
 import { useNavigate } from "react-router-dom";
 
 export default function CreateStaff() {

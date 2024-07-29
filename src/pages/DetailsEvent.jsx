@@ -1,5 +1,5 @@
-import { user } from "@app/constants/user";
-import { Layout } from "@app/Layout";
+import { user } from "../constants/user";
+import { Layout } from "../Layout";
 
 export default function DetailsEvent() {
   const group = user.group;

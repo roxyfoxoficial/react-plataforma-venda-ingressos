@@ -1,4 +1,3 @@
-
 export default function Login() {
   return (
     <section className="vh-100" style={{ backgroundColor: '#508bfc' }}>
