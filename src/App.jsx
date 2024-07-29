@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, RouterProvider, createBrowserRouter, Navigate, Outlet } from "react-router-dom";
+import { RouterProvider, createBrowserRouter, Navigate, Outlet } from "react-router-dom";
 import Home from "./pages/Home";
 import ChangePassword from "./pages/ChangePassword";
 import CreateEvent from "./pages/admin/CreateEvent";
