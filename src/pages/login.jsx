@@ -1,61 +1,50 @@
-
 export default function Login() {
+  function redirectToSignup() {}
+
+  function handleLogin() {}
+
   return (
-    <section className="vh-100" style={{ backgroundColor: '#508bfc' }}>
-      <div className="container py-5 h-100">
-        <div className="row d-flex justify-content-center align-items-center h-100">
-          <div className="col-12 col-md-8 col-lg-6 col-xl-5">
-            <div className="card shadow-2-strong" style={{ borderRadius: '1rem' }}>
-              <div className="card-body p-5 text-center">
-                <h3 className="mb-5">Sign in</h3>
-
-                <div data-mdb-input-init className="form-outline mb-4">
-                <label className="form-label" htmlFor="typeEmailX-2">
-                Email
+    <section className="text-center">
+      <div className="card-body py-5 px-md-5">
+        <div className="row d-flex justify-content-center">
+          <div className="col-lg-8">
+            <h2 className="fw-bold mb-5">Entrar na Conta</h2>
+            <form>
+              <div className="form-outline mb-4">
+                <input
+                  type="email"
+                  id="form3Example3"
+                  className="form-control"
+                />
+                <label className="form-label" htmlFor="form3Example3">
+                  Endereço de Email
                 </label>
-                  <input
-                    type="email"
-                    id="typeEmailX-2"
-                    className="form-control form-control-lg"
-                  />
-                </div>
-
-                <label className="form-label" htmlFor="typePasswordX-2">
-                 Senha
-                </label>
-
-                <div data-mdb-input-init className="form-outline mb-4">
-                  <input
-                    type="password"
-                    id="typePasswordX-2"
-                    className="form-control form-control-lg"
-                  />
-
-                </div>
-
-                <div className="form-check d-flex justify-content-start mb-4">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="form1Example3"
-                  />
-                  <label className="form-check-label" htmlFor="form1Example3">
-                    {" "}
-                    Relembrar Senha{" "}
-                  </label>
-                </div>
-
-                <button
-                  data-mdb-button-init
-                  data-mdb-ripple-init
-                  className="btn btn-primary btn-lg btn-block"
-                  type="submit"
-                >
-                  Login
-                </button>
               </div>
-            </div>
+              <div className="form-outline mb-4">
+                <input
+                  type="password"
+                  id="form3Example4"
+                  className="form-control"
+                />
+                <label className="form-label" htmlFor="form3Example4">
+                  Senha de Acesso
+                </label>
+              </div>
+              <button
+                type="submit"
+                className="btn btn-danger btn-block mb-4"
+                onClick={redirectToSignup}
+              >
+                Cadastrar-se
+              </button>
+              <button
+                type="button"
+                className="btn btn-danger btn-block mb-4"
+                onClick={handleLogin}
+              >
+                Login
+              </button>
+            </form>
           </div>
         </div>
       </div>
