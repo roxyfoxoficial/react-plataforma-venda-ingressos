@@ -6,6 +6,7 @@ import CreateStaff from "./pages/admin/CreateStaff";
 import DetailsEvent from "./pages/DetailsEvent";
 import Profile from "./pages/Profile";
 import Login from "./pages/login";
+import ClosedEvents from "./pages/ClosedEvents";
 import Signup from "./pages/signup";
 import EditEvent from "./pages/admin/EditEvent";
 import ListEvent from "./pages/admin/ListEvent";
@@ -42,6 +43,10 @@ const AppRoutes = () => {
     {
       path: routes.createStaff,
       element: <CreateStaff />
+    },
+    {
+      path: routes.closedEvents,
+      elment: <ClosedEvents />
     },
     {
       path: routes.editEvent,

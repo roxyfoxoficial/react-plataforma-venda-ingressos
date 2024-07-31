@@ -42,6 +42,32 @@ export default function CreateStaff() {
                     </div>
                   </div>
                 </div>
+                <div className="row">
+                  <div className="col-md-6 mb-4">
+                    <div className="form-outline">
+                      <input
+                        type="text"
+                        id="form3Example1"
+                        className="form-control"
+                      />
+                      <label className="form-label" htmlFor="form3Example1">
+                        Telefone
+                      </label>
+                    </div>
+                  </div>
+                  <div className="col-md-6 mb-4">
+                    <div className="form-outline">
+                      <input
+                        type="text"
+                        id="form3Example2"
+                        className="form-control"
+                      />
+                      <label className="form-label" htmlFor="form3Example2">
+                        Cargo
+                      </label>
+                    </div>
+                  </div>
+                </div>
                 <div data-mdb-input-init className="form-outline mb-4">
                   <div className="form-outline">
                     <input

@@ -10,4 +10,5 @@ export const routes = {
   createStaff: "/admin/events/staff/create",
   listStaffs: "/admin/events/staff",
   profile: "/profile",
+  closedEvents: "/closed",
 };
